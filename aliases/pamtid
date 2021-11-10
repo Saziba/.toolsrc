@@ -1,0 +1,1 @@
+sudo sed -i '' -E 's/^(auth +sufficient +pam_smartcard.so)/auth       sufficient     pam_tid.so\n\1/' /etc/pam.d/sudo
