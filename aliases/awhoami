@@ -1,0 +1,1 @@
+AWS_PAGER="" aws sts get-caller-identity

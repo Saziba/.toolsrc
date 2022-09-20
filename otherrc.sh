@@ -1,3 +1,5 @@
+#! /bin/bash
+
 cmm() {
     git commit -am "$*"
 }
