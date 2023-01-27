@@ -9,5 +9,5 @@ load_vars_from_path() {
   done
 }
 
-load_vars_from_path $(dirname $0)/vars
-load_vars_from_path $(dirname $0)/private_vars
+load_vars_from_path $1/vars
+load_vars_from_path $1/private_vars

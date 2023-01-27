@@ -3,7 +3,7 @@ where_am_i=$(dirname $0)
 
 run_if_exists(){
     script=${where_am_i}/${1}.sh
-    [[ -s "$script" ]] && source $script
+    [[ -s "$script" ]] && source $script $where_am_i
 }
 
 run_if_exists bin
