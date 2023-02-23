@@ -49,3 +49,15 @@ aws_list_vpc_dependencies(){
     aws ec2 describe-carrier-gateways --region $region --filters Name=vpc-id,Values=$vpc | grep CarrierGatewayId
     aws ec2 describe-local-gateway-route-table-vpc-associations --region $region --filters Name=vpc-id,Values=$vpc | grep LocalGatewayRouteTableVpcAssociationId    
 }
+
+snc(){
+    if [[ "$HOST" == "DARWIN-004.local" ]]
+    then
+        h=saziba@sazibamacpro.local
+    else
+        h=itagyba.kuhlmann@DARWIN-004.local
+    fi
+    dn=$(dirname $1)
+    rsync -auhvP ${h}:~/$1 ~/$dn
+    rsync -auhvP ~/$1 ${h}:~/$dn
+}
