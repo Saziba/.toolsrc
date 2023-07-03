@@ -1,0 +1,1 @@
+for i in $(find $HOME/Code -type d -d 1 ) ; do  echo "============= $(basename $i) ============= $(cd $i && gl) " ; done

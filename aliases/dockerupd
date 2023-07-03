@@ -1,0 +1,1 @@
+curl https://desktop.docker.com/mac/main/amd64/Docker.dmg -o /tmp/Docker.dmg && hdiutil mount /tmp/Docker.dmg && open /Volumes/Docker
