@@ -1,7 +1,11 @@
 #! /bin/bash
 
 cmm() {
-    git commit -am "$*"
+    commit_type=$1
+    shift
+    domain=$1
+    shift
+    git commit -am "$commit_type($domain): $*"
 }
 
 
