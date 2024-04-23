@@ -25,16 +25,6 @@ get_policies_per_role() {
     done
 }
 
-jtoy() {
-    orig=$1
-    yq -P $orig > ${orig%%.json}.yaml
-}
-
-ytoj() {
-    orig=$1
-    yq -o j $orig > ${orig%%.yaml}.json
-}
-
 aws_list_vpc_dependencies(){
     vpc=$1
     region=${2-us-east-1}

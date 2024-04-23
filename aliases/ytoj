@@ -1,0 +1,1 @@
+pbpaste | yq -o json | pbcopy
