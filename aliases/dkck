@@ -1,0 +1,1 @@
+timeout 2 docker ps || ps aux | grep -i docker | grep -v grep | awk '{print $2}' | xargs kill -9
